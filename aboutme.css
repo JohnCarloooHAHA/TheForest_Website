@@ -1,3 +1,4 @@
+/* General reset and body styling */
 html, body {
     height: 100%;
     margin: 0;
@@ -13,9 +14,10 @@ body {
     background-attachment: fixed;
 }
 
+/* Navbar styling */
 .navbar {
     background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6)); /* Gradient background */
-    padding: 50px 50px;
+    padding: 20px 50px;  /* Adjusted padding for better alignment */
     font-family: 'Poppins', sans-serif;
     position: fixed;
     width: 100%;
@@ -46,25 +48,26 @@ body {
 }
 
 .nav-list a:hover {
-    background-color: #ff6347;  
+    background-color: #ff6347;  /* Tomato color */
     color: white;
 }
 
 .nav-list a:active {
-    background-color: #cd5c5c; 
+    background-color: #cd5c5c; /* Darker shade of tomato */
 }
 
-
+/* Main container for profile picture and description */
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     gap: 20px;
+    padding: 20px;
 }
 
 .profile-picture {
-    width: 200px; 
+    width: 200px;
     height: 200px;
     background-color: #ddd;
     border-radius: 50%;
@@ -81,9 +84,9 @@ body {
 }
 
 .description {
-    max-width: 500px; 
+    max-width: 500px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -93,7 +96,7 @@ body {
     font-size: 2rem;
 }
 
-
+/* Footer styling */
 .footer {
     background-color: #333;
     padding: 20px;
@@ -103,4 +106,53 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    /* Navbar adjustments */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    /* Main container adjustments */
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Profile picture adjustments */
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Description adjustments */
+    .description {
+        max-width: 80%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .description h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 15px;
+    }
 }
