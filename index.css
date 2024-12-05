@@ -17,12 +17,12 @@ body {
 /* Navbar styling */
 .navbar {
     background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6)); /* Gradient background */
-    padding: 50px 50px;
+    padding: 20px 20px;
     font-family: 'Poppins', sans-serif;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensure navbar is in front of other content */
+    z-index: 1000;
 }
 
 .nav-list {
@@ -48,77 +48,68 @@ body {
 }
 
 .nav-list a:hover {
-    background-color: #ff6347;  /* Tomato color */
+    background-color: #ff6347;  
     color: white;
 }
 
 .nav-list a:active {
-    background-color: #cd5c5c; /* Darker shade of tomato */
+    background-color: #cd5c5c; 
 }
 
-/* Gallery Section */
+/* Gallery section */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 200px; /* Push down the content to avoid navbar overlap */
-    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 150px; /* Adjust to fit below the navbar */
 }
 
 .gallery-item {
-    text-align: center;
+    width: 250px;
+    height: 250px;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .gallery-item img {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Hover effect for image */
-.gallery-item:hover img {
-    border: 5px solid crimson; /* Red blood-like border */
-    box-shadow: 0 0 15px crimson; /* Glowing red shadow effect */
-}
-
-/* Hover effect for header text */
-.gallery-item:hover h3 {
-    color: crimson; /* Text turns crimson on hover */
 }
 
 .gallery-item h3 {
-    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
     color: white;
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* Description Section */
+/* Description section */
 .description {
-    text-align: center;
-    margin: 20px 0;
+    margin: 50px auto;
+    max-width: 900px;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .description h2 {
-    font-size: 30px;
-    color: white;
-    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .description p {
-    font-size: 18px;
-    color: white;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-
-/* Footer */
 /* Footer */
 .footer {
     background-color: #333;
@@ -131,29 +122,41 @@ body {
     width: 100%;
 }
 
-
 /* Mobile responsiveness */
 @media (max-width: 600px) {
+    /* Navbar adjustments */
     .nav-list {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
 
-    .gallery {
-        flex-direction: column;
-        align-items: center;
+    .nav-list a {
+        font-size: 16px;
     }
 
-    .gallery-item img {
-        width: 80%;
+    /* Gallery adjustments */
+    .gallery-item {
+        width: 100%; /* Make each item take full width on small screens */
+        height: auto;
+        margin-bottom: 20px;
     }
-}
 
-.ForestColor {
-    transition: color 0.3s;
-    cursor: pointer;
-}
+    .gallery-item h3 {
+        font-size: 1rem;
+        padding: 8px;
+    }
 
-.ForestColor:hover {
-    color: crimson;
+    /* Description section adjustments */
+    .description h2 {
+        font-size: 1.5rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 10px;
+    }
 }
