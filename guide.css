@@ -1,0 +1,123 @@
+/* General reset and body styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('Assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navbar styling */
+.navbar {
+    background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6)); /* Gradient background */
+    padding: 50px 50px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #ff6347;  /* Tomato color */
+    color: white;
+}
+
+.nav-list a:active {
+    background-color: #cd5c5c; /* Darker shade of tomato */
+}
+
+/* Content layout with side placeholders */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px; /* Push content below the fixed navbar */
+    padding: 20px;
+    gap: 20px; /* Added gap between the columns */
+}
+
+/* Side placeholders */
+.side-placeholder {
+    width: 20%; /* Side placeholders take up 20% width */
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.main-content {
+    width: 55%; /* Main content takes up 55% width */
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-placeholder {
+        width: 80%; /* Increase side placeholder width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        width: 80%; /* Increase main content width on mobile */
+    }
+}
