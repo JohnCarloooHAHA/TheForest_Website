@@ -17,7 +17,7 @@ body {
 /* Navbar styling */
 .navbar {
     background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.6)); /* Gradient background */
-    padding: 50px 50px;
+    padding: 20px 20px;
     font-family: 'Poppins', sans-serif;
     position: fixed;
     width: 100%;
@@ -60,12 +60,11 @@ body {
 .content {
     display: flex;
     justify-content: space-between;
-    margin-top: 200px; /* Push content below the fixed navbar */
+    margin-top: 150px; /* Adjusted for better spacing below navbar */
     padding: 20px;
-    gap: 20px; /* Added gap between the columns */
+    gap: 20px;
 }
 
-/* Side placeholders */
 .side-placeholder {
     width: 20%; /* Side placeholders take up 20% width */
     height: 200px;
@@ -102,22 +101,38 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
+    /* Navbar adjustments */
     .nav-list {
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
+    .nav-list a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    /* Content layout adjustments */
     .content {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
+    /* Side placeholders adjustments */
     .side-placeholder {
         width: 80%; /* Increase side placeholder width on mobile */
-        margin-bottom: 20px;
+        margin-bottom: 15px; /* Add space between placeholders */
     }
 
+    /* Main content adjustments */
     .main-content {
         width: 80%; /* Increase main content width on mobile */
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 15px;
     }
 }
